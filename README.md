@@ -5,3 +5,8 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 
 ----
 
+* https://github.com/jonathanfmills/TestingNodeWithMocha
+* could use `nvm` if we need it.  Not yet.
+
+## Testing with Mocha
+* The test runner
