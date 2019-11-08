@@ -1,0 +1,22 @@
+{
+  "name": "ps-node-mocha-testing",
+  "version": "1.0.0",
+  "description": "Pluralsight class \"Testing JavaScript for Node.js with Mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlreklaw/ps-node-mocha-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlreklaw/ps-node-mocha-testing/issues"
+  },
+  "homepage": "https://github.com/rlreklaw/ps-node-mocha-testing#readme",
+  "dependencies": {
+    "mocha": "6.2.2"
+  }
+}
