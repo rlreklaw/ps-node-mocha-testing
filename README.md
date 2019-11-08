@@ -10,3 +10,4 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 
 ## Testing with Mocha
 * The test runner
+* `npm install -g mocha` **and** `npm install mocha`
