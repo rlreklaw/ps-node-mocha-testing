@@ -17,4 +17,5 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 
 ## Using Chai assertions
 * https://www.chaijs.com/
+* `should` adds itself to the `Object.prototype`
 * 
