@@ -14,14 +14,28 @@ describe('AuthController', function settingUpRoles() {
     authController.setRoles(['user']);
   });
   
-describe('isAuthorized', function() {
-    it('Should return false if not authorized', function() {
-      var isAuth = authController.isAuthorized('admin')
+  describe.only('isAuthorized', function() {
+    var user = {};
+    this.beforeEach(function() {
+      user = {
+        roles: ['user'],
+        isAuthorized: function(neededRole) {
+          return this.roles.indexOf(neededRole) >= 0;
+        }
+      };
+      sinon.spy(user, 'isAuthorized');
+      authController.setUser(user);
+    })
+
+    it.only('Should return false if not authorized', function() {
+      var isAuth = authController.isAuthorized('admin');
+      console.log(user.isAuthorized);
+      user.isAuthorized.calledOnce.should.be.true;
       expect(isAuth).to.be.false;
     });
     it('Should return true if authorized', function() {
       authController.setRoles(['user', 'admin']);
-      var isAuth = authController.isAuthorized('admin')
+      var isAuth = authController.isAuthorized('admin');
       isAuth.should.be.true;
     });
     it('should not allow a get if not authorized');
