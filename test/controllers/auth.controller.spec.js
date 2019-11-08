@@ -10,7 +10,7 @@ chai.should();
 
 describe('AuthController', function settingUpRoles() {
   beforeEach(function() {
-    console.log('running before each');
+    // console.log('running before each');
     authController.setRoles(['user']);
   });
   
@@ -29,16 +29,18 @@ describe('AuthController', function settingUpRoles() {
 
     it('Should return false if not authorized', function() {
       var isAuth = authController.isAuthorized('admin');
-      console.log(user.isAuthorized);
+      // console.log(user.isAuthorized);
       user.isAuthorized.calledOnce.should.be.true;
       expect(isAuth).to.be.false;
     });
-    
+
     it('Should return true if authorized', function() {
-      authController.setRoles(['user', 'admin']);
+      user.roles = ['user', 'admin'];
       var isAuth = authController.isAuthorized('admin');
+      user.isAuthorized.calledOnce.should.be.true;
       isAuth.should.be.true;
     });
+
     it('should not allow a get if not authorized');
     it('should allow a get if authorized');
   });
@@ -60,7 +62,7 @@ describe('AuthController', function settingUpRoles() {
     });
   });
 
-  describe.only('getIndex',function() {
+  describe('getIndex',function() {
     var user = {};
     this.beforeEach(function() {
       user = {
