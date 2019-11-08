@@ -14,3 +14,7 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 * mocha discourages the use of arrow functions because this prevents access to the Mocha context where you can change things like test timeouts for testing async functions.
 * `.only()` on `describe` or `it` to only run those tests
 * `.skip()` on `describe` or `it` to skip those tests.
+
+## Using Chai assertions
+* https://www.chaijs.com/
+* 
