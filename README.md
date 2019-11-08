@@ -20,3 +20,6 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 * https://www.chaijs.com/
 * `should` adds itself to the `Object.prototype`
 * `chai-as-promised` module for testing async with promises
+
+## Mocking with Sinon
+* https://sinonjs.org/
