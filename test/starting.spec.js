@@ -1,6 +1,5 @@
 var assert = require('assert');
-// no require should in this File.  
-// It gets added to Object.prototype in the other spec for entire test execution.
+var should = require('chai').should();
 
 describe('Basic Mocah Test', function() {
   it('should deal with objects', function() {
@@ -8,5 +7,10 @@ describe('Basic Mocah Test', function() {
     var objB = {name: 'Robert', gender: 'male'};
     obj.should.have.property('name').equal('Robert');
     obj.should.deep.equal(objB);
+  });
+  it('should allow testing nulls', function() {
+    var iAmNull = null;
+    // iAmNull.should.not.exist;  // this doesn't do what we want
+    should.not.exist(iAmNull);
   });
 });
