@@ -6,7 +6,7 @@ describe('AuthController', function settingUpRoles() {
     console.log('running before each');
     authController.setRoles(['user']);
   });
-  beforeEach(function erroringFunction() {
+  beforeEach('yo, this function fails', function erroringFunction() {
     throw({ error: 'error' });
   });
   
