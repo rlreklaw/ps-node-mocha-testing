@@ -33,6 +33,7 @@ describe('AuthController', function settingUpRoles() {
       user.isAuthorized.calledOnce.should.be.true;
       expect(isAuth).to.be.false;
     });
+    
     it('Should return true if authorized', function() {
       authController.setRoles(['user', 'admin']);
       var isAuth = authController.isAuthorized('admin');
@@ -96,6 +97,22 @@ describe('AuthController', function settingUpRoles() {
       isAuth.calledOnce.should.be.true;
       res.render.calledOnce.should.be.true;
       res.render.firstCall.args[0].should.equal('error');
+    });
+
+    it('should render notAuth if user is not authorized', function() {
+      var req = {user: user};
+      var isAuth = sinon.stub(user, 'isAuthorized').returns(false);
+      var res = {
+        render: function() {}
+      };
+      var mock = sinon.mock(res);
+      mock.expects('render').once().withExactArgs('notAuth');
+
+      authController.getIndex(req, res);
+      // console.log(res.render);
+      isAuth.calledOnce.should.be.true;
+
+      mock.verify();
     });
   });
 });
