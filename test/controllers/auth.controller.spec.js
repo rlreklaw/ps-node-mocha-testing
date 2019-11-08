@@ -1,12 +1,16 @@
 var assert = require('assert');
 var authController = require('../../controllers/auth.controller');
 
-describe('AuthController', function() {
-  this.beforeEach(function() {
+describe('AuthController', function settingUpRoles() {
+  beforeEach(function() {
     console.log('running before each');
     authController.setRoles(['user']);
   });
-  describe('isAuthorized', function() {
+  beforeEach(function erroringFunction() {
+    throw({ error: 'error' });
+  });
+  
+describe('isAuthorized', function() {
     it('Should return false if not authorized', function() {
       assert.equal(false, authController.isAuthorized('admin'));
     });
