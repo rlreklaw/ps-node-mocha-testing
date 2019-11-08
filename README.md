@@ -11,3 +11,4 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 ## Testing with Mocha
 * The test runner
 * `npm install -g mocha` **and** `npm install mocha`
+* mocha discourages the use of arrow functions because this prevents access to the Mocha context where you can change things like test timeouts for testing async functions.
