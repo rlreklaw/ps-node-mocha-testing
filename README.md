@@ -23,6 +23,11 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 
 ## Mocking with Sinon
 * https://sinonjs.org/
+* https://api.github.com/users/jonathanfmills
+* https://api.github.com/users/jonathanfmills/repos
 
 ## Testing real stuff
 * `rewire` npm package
+* istanbul for code coverage
+  * npm install -g istanbul
+  * istanbul cover node_modules/mocha/bin/_mocha -- tests/**/*

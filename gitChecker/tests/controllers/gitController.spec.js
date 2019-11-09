@@ -16,7 +16,7 @@ describe('gitController', function() {
         GitCtrl.__set__('gitService', gitService);
     });
 
-    it.only('should get user and repos from git service', function(done) {
+    it('should get user and repos from git service', function(done) {
         this.timeout(10000);
         var req = { params: { userId: 'jonathanfmills' } };
         var res = { json: test };
