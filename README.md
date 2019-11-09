@@ -23,3 +23,6 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 
 ## Mocking with Sinon
 * https://sinonjs.org/
+
+## Testing real stuff
+* `rewire` npm package
