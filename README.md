@@ -27,7 +27,7 @@ https://app.pluralsight.com/library/courses/mocha-javascript-testing-nodejs/tabl
 * https://api.github.com/users/jonathanfmills/repos
 
 ## Testing real stuff
-* `rewire` npm package
+* `rewire` npm package to spy on unexposed functions
 * istanbul for code coverage
   * npm install -g istanbul
   * istanbul cover node_modules/mocha/bin/_mocha -- tests/**/*
